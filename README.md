@@ -4,6 +4,7 @@
 
 1. Updated column '2urivied" to "Survived".
 2. Filled in missing values in 'Embarked' with the Mode as this dataset uses 0,1,2 format to inform on which port.
+3. Removed all 'zero' columns that was used for machine learning.
 
 ## What I Learned
 
@@ -15,4 +16,6 @@
 2. Remember 'index=False'
 2.1 When saving: data.to_csv('./titanic.csv', index=False) recall that pandas by default adds in its own index column.
 
+3. How to drop columns with df.drop(columns={})
 
+4. How to fill in missing data with .fillna()
