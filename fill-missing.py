@@ -7,10 +7,10 @@ data = pd.read_csv('./titanic.csv')
 
 
 ## filled the 2 missing values with the mode (most common)
-#most_common = data['Embarked'].mode()[0]
-#data['Embarked'] = data['Embarked'].fillna(most_common)
+most_common = data['Embarked'].mode()[0]
+data['Embarked'] = data['Embarked'].fillna(most_common)
 
-#data.to_csv('./titanic.csv', index=False)
+data.to_csv('./titanic.csv', index=False)
 
 
 print(data.isnull().sum())
