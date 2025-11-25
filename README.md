@@ -30,10 +30,10 @@
 3. 0.1737862546525127 == Weak relation between fare and survival. It is leaning a positive correlation which is what i assumed but I expected it to be stronger. I thought bigger fare meant better position on boat or secure spot on a ship.
 4. 0.40402003566536115 == stronger relation between your sex and survival rate. This is saying women where more likely to be saved than men.
 5. -0.014375452914690471 == Weak relation with having a spouse or sibling on board and being saved.
-6. 0.054908128447466 == weak positive relation with have a child or parent on board with survival.
+6. 0.054908128447466 == weak positive relation with have a child or parent on boardhttps://github.com/AlexOcegueda/titanic-eda/blob/main/imgs/corr_heatmap.png with survival.
 7. -0.24468558861046874 == negative relation with class and survival rate.
 ![Image](https://github.com/AlexOcegueda/titanic-eda/blob/main/imgs/sex-survival-barchart.png)
-
+![Image](https://github.com/AlexOcegueda/titanic-eda/blob/main/imgs/corr_heatmap.png)
 ### Logistic vs Linear Regression
 My analysis showed that Sex was the strongest predictor of survival. The Logistic Regression model confirms that being female significantly increased the odds of survival, while Fare had a smaller, but still statistically significant, positive impact on survival probability.
 
