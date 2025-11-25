@@ -30,7 +30,7 @@
 5. 0.054908128447466 == weak positive relation with have a child or parent on board with survival.
 6. -0.24468558861046874 == negative relation with class and survival rate.
 
-![sex-survival-barchart]("./imgs/sex-survival-barchart.png")
+![sex-survival-barchart]("https://github.com/AlexOcegueda/titanic-eda/blob/main/imgs/sex-survival-barchart.png")
 
 ### Logistic vs Linear Regression
 My analysis showed that Sex was the strongest predictor of survival. The Logistic Regression model confirms that being female significantly increased the odds of survival, while Fare had a smaller, but still statistically significant, positive impact on survival probability.
