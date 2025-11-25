@@ -4,7 +4,8 @@
 
 1. Updated column '2urivied" to "Survived".
 2. Filled in missing values in 'Embarked' with the Mode as this dataset uses 0,1,2 format to inform on which port.
-3. Removed all 'zero' columns that was used for machine learning.
+3. Filled in missing values in 'Age' with the Median.
+4. Removed all 'zero' columns that was used for machine learning.
 
 ## What I Learned (Pandas)
 
@@ -20,21 +21,30 @@
 
 4. How to fill in missing data with .fillna()
 
-## Key Findings
+## Key Findings: Titanic Survival Factors
 
-### Correlation
-1. -0.0559 == Close to zero so no relation between age and surivival on the titanic. It is leaning towards a negative correlation which is interesting. I interpet this to mean the older you were the less likely you would be saved.
+This analysis explores the primary factors that influenced passenger survival using both statistical correlation and predictive modeling (Linear and Logistic Regression).
 
-![Image](https://github.com/AlexOcegueda/titanic-eda/blob/main/imgs/age_distribution.png)
+### Correlations
 
-3. 0.1737862546525127 == Weak relation between fare and survival. It is leaning a positive correlation which is what i assumed but I expected it to be stronger. I thought bigger fare meant better position on boat or secure spot on a ship.
-4. 0.40402003566536115 == stronger relation between your sex and survival rate. This is saying women where more likely to be saved than men.
-5. -0.014375452914690471 == Weak relation with having a spouse or sibling on board and being saved.
-6. 0.054908128447466 == weak positive relation with have a child or parent on boardhttps://github.com/AlexOcegueda/titanic-eda/blob/main/imgs/corr_heatmap.png with survival.
-7. -0.24468558861046874 == negative relation with class and survival rate.
-![Image](https://github.com/AlexOcegueda/titanic-eda/blob/main/imgs/sex-survival-barchart.png)
-![Image](https://github.com/AlexOcegueda/titanic-eda/blob/main/imgs/corr_heatmap.png)
+Sex,+0.404,Strong Positive,"Strongest factor measured. The positive correlation indicates that the encoded female value is highly associated with survival, confirming the priority given to women."
+
+Pclass,-0.245,Moderate Negative,"A moderate negative relationship exists, meaning as the class number increases (moving from 1st → 3rd), the survival rate significantly decreases."
+
+Fare,+0.174,Weak Positive,"A weak but noticeable positive association, suggesting that higher ticket prices (often linked to higher class) offered a slight advantage for survival."
+
+Age,-0.056,Very Weak Negative,"A negligible linear relationship. The slight negative lean suggests that, generally, older passengers had a marginally reduced chance of survival compared to younger ones."
+
+Parch (Parents/Children),+0.055,Very Weak Positive,"A negligible relationship, slightly positive due to the higher survival rate of children."
+
+SibSp (Siblings/Spouses),-0.014,Very Weak Negative,Virtually no linear relationship. The impact of having a sibling or spouse was not a significant factor on survival probability.
+
 ### Logistic vs Linear Regression
 My analysis showed that Sex was the strongest predictor of survival. The Logistic Regression model confirms that being female significantly increased the odds of survival, while Fare had a smaller, but still statistically significant, positive impact on survival probability.
 
 (Linear R2≈0.030, Logit R2≈0.147) Logistic Regression (0.147) was a much better fit for the binary survival outcome than Linear Regression (0.030).
+
+![Image](https://github.com/AlexOcegueda/titanic-eda/blob/main/imgs/age_distribution.png)
+![Image](https://github.com/AlexOcegueda/titanic-eda/blob/main/imgs/pclass-barchart.png)
+![Image](https://github.com/AlexOcegueda/titanic-eda/blob/main/imgs/sex-survival-barchart.png)
+![Image](https://github.com/AlexOcegueda/titanic-eda/blob/main/imgs/corr_heatmap.png)
